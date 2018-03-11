@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Vending Kata</string>
+    <string name="item_dispatched">Item Dispatched</string>
+    <string name="sold_out">Sold Out</string>
+    <string name="insert_coins">Insert Coins</string>
+    <string name="insert_valid_money">Insert Valid Coins only</string>
+
+</resources>
