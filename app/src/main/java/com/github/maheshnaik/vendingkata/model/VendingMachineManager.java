@@ -16,7 +16,7 @@ public class VendingMachineManager implements VendingMachineOperation {
     protected int totalInsertedMoney = 0;
     protected int moneyReturned;
 
-    protected final String ItemDispatched = "Item Dispatched";
+    protected final String ItemDispatched = "%s Dispatched";
     protected final String SoldOut = "Sold Out";
     protected final String InsertMoreCoins = "Insert Coins";
     protected final String InsertValid = "Insert Valid Coins only";
@@ -84,7 +84,7 @@ public class VendingMachineManager implements VendingMachineOperation {
             moneyReturned = totalInsertedMoney;
             totalInsertedMoney = 0;
         } else if (totalInsertedMoney >= item.getCost()) {
-            displayMessage = ItemDispatched;
+            displayMessage = String.format(ItemDispatched, item.getName());
             moneyReturned = totalInsertedMoney - item.getCost();
             totalInsertedMoney = 0;
             item.updateAvailable(available - 1);
